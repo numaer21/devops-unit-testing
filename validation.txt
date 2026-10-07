@@ -1,0 +1,53 @@
+Validation recorded on 7 October 2026 in the assistant execution environment.
+These results do not claim execution on the student's computer.
+
+$ node --version
+v24.19.0
+Exit code: 0
+
+$ npm ls --depth=0
+devops-unit-testing@1.0.0 /workspace/scratch/36b2295bc4bf/devops-unit-testing
+├── chai@6.3.0
+└── mocha@12.0.3
+Exit code: 0
+
+$ npm start
+> devops-unit-testing@1.0.0 start
+> node main.js
+
+10 + 5 = 15
+10 - 5 = 5
+10 * 5 = 50
+10 / 5 = 2
+Exit code: 0
+
+Independent test check: main.js was temporarily unavailable.
+$ npm test
+> devops-unit-testing@1.0.0 test
+> mocha "tests/**/*.test.js"
+
+
+
+  mylib arithmetic functions
+Starting mylib tests.
+    add
+      ✔ adds two positive numbers
+      ✔ adds a negative number
+      ✔ adds decimal numbers within a small tolerance
+    subtract
+      ✔ subtracts two numbers
+      ✔ returns a negative result when appropriate
+    multiply
+      ✔ multiplies two numbers
+      ✔ returns zero when multiplying by zero
+    divide
+      ✔ divides two numbers
+      ✔ returns a fractional result
+      ✔ throws an error when the divisor is zero
+Finished mylib tests.
+
+
+  10 passing (6ms)
+Exit code: 0
+
+main.js was restored after the independent test check.
